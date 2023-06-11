@@ -1,0 +1,134 @@
+@import "./variables";
+@import "./mixins";
+
+.error_page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 80px 0px;
+
+  .img{
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+  }
+
+  .error_redirect_button{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 20px;
+    .error_button{
+      color: #6f6f6f;
+      position: relative;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 500;
+      border-radius: 0;
+      padding: 13px 20px;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: 1px solid #e2e2e2;
+      min-width: 155px;
+      cursor: pointer;
+      &:hover{
+        color: #fff;
+        border-color: $hover-color;
+        background-color: $hover-color;
+      }
+      @include for-phone-only{
+        font-size: 12px;
+        padding: 10px 5px;
+        min-width: 100px;
+      }
+    }
+  }
+}
+
+.coming_page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 80px 0px;
+
+  .text{
+    font-family: 'Bellota Text', cursive;
+    color: #61755c;
+    font-size: 60px;
+    margin-top: 0px;
+    @include for-phone-only{
+      font-size: 35px;
+    }
+  }
+
+  .text_small{
+    color: $color;
+    font-size: 40px;
+    font-family: 'Bellota Text', cursive;
+    margin-top: 20px;
+    margin: 0px;
+    @include for-phone-only{
+      font-size: 20px;
+    }
+  }
+
+  .error_redirect_button{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 20px;
+    .error_button{
+      color: #6f6f6f;
+      position: relative;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 500;
+      border-radius: 0;
+      padding: 13px 20px;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: 1px solid #e2e2e2;
+      min-width: 155px;
+      cursor: pointer;
+      &:hover{
+        color: #fff;
+        border-color: $hover-color;
+        background-color: $hover-color;
+      }
+      @include for-phone-only{
+        font-size: 12px;
+        padding: 10px 5px;
+        min-width: 100px;
+
+      }
+    }
+  }
+}
+
+//BreadCrumb  style start
+
+.breadcrumb{
+    background-image: url("https://cdn.shopify.com/s/files/1/0605/4785/8664/files/terms-condition-01.jpg?v=1637069640");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  .title{
+    color: #61755c;
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 600;
+    font-family: "Bellota Text", sans-serif;
+    margin: 0px;
+  }
+}

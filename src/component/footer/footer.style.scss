@@ -1,0 +1,82 @@
+@import "../../Styles/variables";
+@import "../../Styles/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
+
+
+.footer__description{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: start;
+  padding: 50px ;
+  border-bottom: 2px solid #61755c;
+  @include for-tablet-only{
+    flex-direction: column;
+  }
+
+  .description_text{
+    width: 25%;
+    font-size: 16px;
+    color: $color;
+    font-weight: 500;
+    line-height: 40px;
+    margin: 0;
+
+    @include for-tablet-only{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.footer_copyright{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  text-align: start;
+  @include for-tablet-only{
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .copyright{
+    color: #8b837d;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .5px;
+    width: 30%;
+    margin: 0;
+    @include for-tablet-only{
+      width: 100%;
+    }
+  }
+  .madeby{
+    color: #8b837d;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .5px;
+    width: 25%;
+    margin: 0;
+    span{
+      color: $hover-color
+    }
+
+    @include for-tablet-only{
+      width: 100%;
+    }
+  }
+}
+
+.brand_name{
+  color: #61755c;
+  font-family: 'Bellota Text', cursive;
+  font-size: 32px;
+  margin: 0px;
+  letter-spacing: 4px;
+  line-height: 32px;
+}

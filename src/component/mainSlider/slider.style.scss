@@ -1,0 +1,90 @@
+@import "../../Styles/variables";
+@import "../../Styles/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
+
+.custom__slider{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  @include for-phone-only{
+   flex-direction: column;
+  }
+  .slider__image{
+    width: 50%;
+    @include for-phone-only{
+      width: 100%
+    }
+    img{
+      width: 100%;
+      height: 70vh;
+      @include for-phone-only{
+        height: 35vh;
+      }
+    }
+  }
+
+  .slider__content{
+    width: 50%;
+    background-color: #f0ede8;
+    background-image: url(https://cdn.shopify.com/s/files/1/0605/4785/8664/files/slider-pettern.png?v=1635500323);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 78px;
+    text-align: left;
+    @include for-phone-only{
+      width: 100%;
+      height: 35vh;
+      padding: 20px 50px
+    }
+    .slider__text{
+      color: $hover-color;
+      @include for-phone-only{
+        font-size: 15px;
+      }
+    }
+    .slider__header{
+      font-family: 'Bellota Text', cursive;
+      color: #61755c;
+      font-size: 50px;
+      transform: translateY(-100%);
+      transition: all 1s;
+      opacity: 0;
+      margin-top: 0px;
+      @include for-phone-only{
+        font-size: 25px;
+      }
+    }
+    .first, .second{
+      transform: translateY(0px);
+      opacity: 1
+    }
+    .slider__button{
+      color:$hover-color;
+      font-size: 15px;
+      line-height: 12px;
+      line-height: 1;
+      padding: 20px 0px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 0;
+      letter-spacing: 1px;
+      background-color: #fff;
+      transition: 0.3s;
+      width: 60%;
+      text-align: center;
+      cursor: pointer;
+      @include for-phone-only{
+        font-size: 12px;
+        padding: 10px 5px
+      }
+      &:hover{
+        color: #fff;
+        background-color: $hover-color;
+        opacity: 1
+      }
+    }
+  }
+}
+
